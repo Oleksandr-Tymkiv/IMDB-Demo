@@ -1,0 +1,15 @@
+#spring.application.name=MainModule
+
+#logging.level.org.springframework=DEBUG
+#logging.level.root=INFO
+
+
+spring:
+  application:
+    name: MainModule
+
+logging:
+  level:
+    root: info
+    org:
+      springframework: DEBUG
