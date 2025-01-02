@@ -1,5 +1,6 @@
 package com.project.superduperproject.music.api.services;
 
+import com.project.superduperproject.music.api.representation.AuthorRequest;
 import com.project.superduperproject.music.dto.AlbumDTO;
 import com.project.superduperproject.music.dto.AuthorDTO;
 import com.project.superduperproject.music.dto.mappers.AuthorDTOMapper;
@@ -16,8 +17,12 @@ public class AuthorService {
     private final AuthorRepository authorRepository;
     private final AuthorDTOMapper authorDTOMapper;
 
-    public void saveAuthor(Author author) {
-        authorRepository.save(author);
+    public void saveAuthor(AuthorRequest authorRequest) {
+        authorRepository.save(Author.builder()
+                        .authorName(authorRequest.authorName())
+                        .bio(authorRequest.bio())
+                        .genre(authorRequest.genre())
+                .build());
     }
 
     public List<AuthorDTO> getAllAuthors() {

@@ -1,5 +1,6 @@
 package com.project.superduperproject.music.api.controllers;
 
+import com.project.superduperproject.music.api.representation.AuthorRequest;
 import com.project.superduperproject.music.api.services.AuthorService;
 import com.project.superduperproject.music.dto.AuthorDTO;
 import com.project.superduperproject.music.models.Author;
@@ -16,8 +17,8 @@ public class AuthorController {
     private final AuthorService authorService;
 
     @PostMapping("/save-author")
-    public void saveAuthor(@RequestBody Author author) {
-        authorService.saveAuthor(author);
+    public void saveAuthor(@RequestBody AuthorRequest authorRequest) {
+        authorService.saveAuthor(authorRequest);
     }
 
     @GetMapping("/get-all-authors")
