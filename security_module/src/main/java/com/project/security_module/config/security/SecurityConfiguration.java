@@ -1,4 +1,4 @@
-package com.project.security_module.config;
+package com.project.security_module.config.security;
 
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;

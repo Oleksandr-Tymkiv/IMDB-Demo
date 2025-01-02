@@ -1,7 +1,8 @@
-#spring.application.name=security_module
+#spring.application.name=main_module
+
 spring:
   application:
-    name: security_module
+    name: main_module
   jpa:
     properties:
       hibernate:
@@ -17,4 +18,4 @@ spring:
 server:
   error:
     include-message: always
-  port: 8081
+  port: 8082

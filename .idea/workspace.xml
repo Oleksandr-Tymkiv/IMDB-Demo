@@ -5,7 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f66ee45-b8eb-4d98-a41f-824240ce84a5" name="Changes" comment="Changed project structure.">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main_module/src/main/java/com/project/main_module/api/controllers/MusicController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main_module/src/main/java/com/project/main_module/api/representation/AlbumRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main_module/src/main/java/com/project/main_module/api/services/MusicService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main_module/src/main/java/com/project/main_module/dto/AlbumDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main_module/src/main/java/com/project/main_module/dto/AuthorDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main_module/src/main/java/com/project/main_module/models/Album.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main_module/src/main/java/com/project/main_module/models/Author.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main_module/src/main/java/com/project/main_module/models/Music.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security_module/src/main/java/com/project/security_module/auth/services/AuthenticationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security_module/src/main/java/com/project/security_module/config/async/AsyncConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_module/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/main_module/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_module/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/main_module/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security_module/src/main/java/com/project/security_module/auth/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/security_module/src/main/java/com/project/security_module/auth/controllers/AuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security_module/src/main/java/com/project/security_module/auth/AuthenticationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/security_module/src/main/java/com/project/security_module/auth/representation/AuthenticationRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security_module/src/main/java/com/project/security_module/auth/AuthenticationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/security_module/src/main/java/com/project/security_module/auth/representation/AuthenticationResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security_module/src/main/java/com/project/security_module/auth/AuthenticationService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/security_module/src/main/java/com/project/security_module/auth/RegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/security_module/src/main/java/com/project/security_module/auth/representation/RegisterRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security_module/src/main/java/com/project/security_module/config/ApplicationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/security_module/src/main/java/com/project/security_module/config/ApplicationConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security_module/src/main/java/com/project/security_module/config/AuthFilterJwt.java" beforeDir="false" afterPath="$PROJECT_DIR$/security_module/src/main/java/com/project/security_module/config/security/AuthFilterJwt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security_module/src/main/java/com/project/security_module/config/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/security_module/src/main/java/com/project/security_module/config/security/JwtService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security_module/src/main/java/com/project/security_module/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/security_module/src/main/java/com/project/security_module/config/security/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security_module/src/main/java/com/project/security_module/users/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/security_module/src/main/java/com/project/security_module/users/repositories/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security_module/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/security_module/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +39,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -22,18 +47,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Oleksandr-Tymkiv"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Oleksandr-Tymkiv&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Oleksandr-Tymkiv/SuperDuperProject",
-    "accountId": "9259e9c8-cbc8-4905-916a-41321eae210c"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Oleksandr-Tymkiv/SuperDuperProject&quot;,
+    &quot;accountId&quot;: &quot;9259e9c8-cbc8-4905-916a-41321eae210c&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 0
@@ -51,6 +76,8 @@
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.MainModuleApplication.executor": "Run",
     "Spring Boot.Microservice1Application.executor": "Run",
     "Spring Boot.Microservice2Application.executor": "Run",
     "Spring Boot.SecurityModuleApplication.executor": "Run",
@@ -77,6 +104,10 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.project.main_module.api.services" />
+      <recent name="com.project.main_module.models" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\SuperDuperProject\security_module\src\main\java\com\project\security_module" />
     </key>
@@ -98,17 +129,15 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.SecurityModuleApplication">
+  <component name="RunManager" selected="Spring Boot.MainModuleApplication">
     <configuration name="MainModuleApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <envs>
+        <env name="db_url" value="jdbc:postgresql://localhost:5432/super_duper_security" />
+        <env name="db_username" value="postgres" />
+        <env name="db_password" value="FdgP7LdDq_Wa" />
+      </envs>
       <module name="main_module" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.project.main_module.MainModuleApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Microservice2Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="microservice_2" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.project.microservice_2.Microservice2Application" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -128,7 +157,6 @@
     <list>
       <item itemvalue="Spring Boot.MainModuleApplication" />
       <item itemvalue="Spring Boot.SecurityModuleApplication" />
-      <item itemvalue="Spring Boot.Microservice2Application" />
     </list>
   </component>
   <component name="SharedIndexes">
@@ -148,7 +176,10 @@
       <option name="presentableId" value="Default" />
       <updated>1735393030925</updated>
       <workItem from="1735393032227" duration="224000" />
-      <workItem from="1735393262366" duration="2886000" />
+      <workItem from="1735393262366" duration="3110000" />
+      <workItem from="1735407822102" duration="3166000" />
+      <workItem from="1735563549547" duration="110000" />
+      <workItem from="1735825145988" duration="7025000" />
     </task>
     <task id="LOCAL-00001" summary="Changed project structure.">
       <option name="closed" value="true" />
@@ -166,7 +197,23 @@
       <option name="project" value="LOCAL" />
       <updated>1735395896182</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Changed project structure.">
+      <option name="closed" value="true" />
+      <created>1735396332647</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1735396332647</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Changed project structure.">
+      <option name="closed" value="true" />
+      <created>1735396364744</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1735396364745</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

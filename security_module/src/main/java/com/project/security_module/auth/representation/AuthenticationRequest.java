@@ -1,4 +1,4 @@
-package com.project.security_module.auth;
+package com.project.security_module.auth.representation;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
