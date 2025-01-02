@@ -1,0 +1,20 @@
+#spring.application.name=security_module
+spring:
+  application:
+    name: SuperDuperProject
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+  datasource:
+    url: ${db_url}
+    password: ${db_password}
+    username: ${db_username}
+
+server:
+  error:
+    include-message: always
+  port: 8081
