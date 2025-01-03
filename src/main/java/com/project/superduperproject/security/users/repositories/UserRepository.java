@@ -11,7 +11,6 @@ import java.util.concurrent.CompletableFuture;
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
 
-    @Async
-    CompletableFuture<Optional<User>> findByEmail(String email);
+    Optional<User> findByEmail(String email);
 
 }

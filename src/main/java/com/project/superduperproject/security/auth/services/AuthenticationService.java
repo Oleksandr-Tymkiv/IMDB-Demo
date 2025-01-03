@@ -26,38 +26,34 @@ public class AuthenticationService {
     private final JwtService jwtService;
     private final AuthenticationManager authenticationManager;
 
-    @Async("AsyncTask")
-    public CompletableFuture<AuthenticationResponse> register(RegisterRequest registerRequest) {
-        return userRepository.findByEmail(registerRequest.getEmail())
-                .thenApply(userR -> {
-                    if (userR.isPresent()) {
-                        throw new IllegalStateException("User already exists");
-                    }
-                    var user = User
-                            .builder()
-                            .name(registerRequest.getName())
-                            .password(passwordEncoder.encode(registerRequest.getPassword()))
-                            .email(registerRequest.getEmail())
-                            .dateOfBirth(registerRequest.getDateOfBirth())
-                            .role(Role.USER)
-                            .build();
-
-                    userRepository.save(user);
-                    var jwt = jwtService.generatorJwt(user);
-                    return AuthenticationResponse.builder().token(jwt).build();
-                });
+    public AuthenticationResponse register(RegisterRequest registerRequest){
+        if(userRepository.findByEmail(registerRequest.getEmail()).isPresent()){
+            throw new IllegalStateException("Phone has taken");
+        }
+        var user = User.builder()
+                .name(registerRequest.getName())
+                .dateOfBirth(registerRequest.getDateOfBirth())
+                .email(registerRequest.getEmail())
+                .password(passwordEncoder.encode(registerRequest.getPassword()))
+                .role(Role.USER)
+                .build();
+        userRepository.save(user);
+        var jwt = jwtService.generatorJwt(user);
+        return AuthenticationResponse
+                .builder()
+                .token(jwt)
+                .build();
     }
 
-    @Async("AsyncTask")
-    public CompletableFuture<AuthenticationResponse> authenticate(AuthenticationRequest authenticationRequest) {
+    public AuthenticationResponse authenticate(AuthenticationRequest authenticationRequest) {
         UserDetails user = (UserDetails) authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(authenticationRequest.getEmail(), authenticationRequest.getPassword())
         ).getPrincipal();
 
         var jwt = jwtService.generatorJwt(user);
-        return CompletableFuture.completedFuture(AuthenticationResponse
+        return AuthenticationResponse
                 .builder()
                 .token(jwt)
-                .build());
+                .build();
     }
 }

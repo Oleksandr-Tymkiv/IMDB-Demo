@@ -1,6 +1,8 @@
 package com.project.superduperproject.security.users.models;
 
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.project.superduperproject.app.models.Review;
 import com.project.superduperproject.security.users.roles.Role;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -16,7 +18,7 @@ import java.util.Collection;
 import java.util.List;
 
 @Entity
-@Table(name = "_users_security")
+@Table(name = "_users_")
 @Data
 @Builder
 @NoArgsConstructor
@@ -25,15 +27,14 @@ public class User implements UserDetails {
 
     @Id
     @SequenceGenerator(
-            name = "_seq_name",
-            sequenceName = "_seq_name",
+            name = "sequence_user",
+            sequenceName = "sequence_user",
             allocationSize = 1
     )
     @GeneratedValue(
-            generator = "_seq_name",
+            generator = "sequence_user",
             strategy = GenerationType.SEQUENCE
     )
-    @Column(name = "id_user")
     private Long idUser;
     private String name;
     private String password;
@@ -44,7 +45,7 @@ public class User implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of(new SimpleGrantedAuthority(role.name()));
+        return List.of(new SimpleGrantedAuthority("ROLE_" + role.name()));
     }
 
     @Override

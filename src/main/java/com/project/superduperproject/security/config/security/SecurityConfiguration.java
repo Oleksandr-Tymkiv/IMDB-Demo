@@ -25,7 +25,9 @@ public class SecurityConfiguration {
         return http
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(authorizeRequests ->
-                        authorizeRequests.requestMatchers("/api/auth/**").permitAll().anyRequest().authenticated())
+                        authorizeRequests.requestMatchers("/api/auth/**").permitAll()
+                                .requestMatchers("/api/movie/save-movie").hasRole("ADMIN")
+                                .anyRequest().authenticated())
                 .sessionManagement(sessionManagement -> sessionManagement.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authenticationProvider(authenticationProvider)
                 .addFilterBefore(authFilterJwt, UsernamePasswordAuthenticationFilter.class)

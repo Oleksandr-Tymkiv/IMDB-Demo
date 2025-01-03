@@ -20,16 +20,12 @@ public class AuthenticationController {
 
     @PostMapping("/register")
     public ResponseEntity<AuthenticationResponse> register(@RequestBody RegisterRequest registerRequest) {
-//        return ResponseEntity.ok(authenticationService.register(registerRequest));
-//        return authenticationService.register(registerRequest).thenApply(ResponseEntity::ok);
-        return ResponseEntity.ok(authenticationService.register(registerRequest).join());
+        return ResponseEntity.ok(authenticationService.register(registerRequest));
     }
 
     @PostMapping("/authentication")
     public ResponseEntity<AuthenticationResponse> authentication(@RequestBody AuthenticationRequest authenticationRequest) {
-//        return ResponseEntity.ok(authenticationService.authenticate(authenticationRequest));
-//        return authenticationService.authenticate(authenticationRequest).thenApply(ResponseEntity::ok);
-        return ResponseEntity.ok(authenticationService.authenticate(authenticationRequest).join());
+        return ResponseEntity.ok(authenticationService.authenticate(authenticationRequest));
     }
 
 }
